@@ -1,0 +1,147 @@
+input:valid{
+    border: 2px solid;
+    border-color: green;
+    }
+   input:invalid{
+    border: 2px solid;
+    border-color: red;
+   }
+    .valid{
+        color: green;
+        position: absolute;
+        left: 220px;
+        top: 60px;
+    }
+    .invalid{
+        color: red;
+        position: absolute;
+        left: 400px;
+        top: 60px;
+    }
+    input:valid + .valid::after {
+        content: ' ✔';
+        color: green;
+    }
+    input:invalid + .invalid::after {
+        content: ' ✘';
+        color: red;
+    }
+    input{
+        padding: 5px;
+    }
+   
+    input[type="checkbox"]{
+        display: none;
+    }
+    div.check{
+        display: inline-block;
+    }
+    div.check label{
+        display: block;
+        width: 60px; 
+        height: 30px;
+        border: 2px solid red;
+        border-radius: 10px;
+        position: relative;
+      
+    }
+   div.check input:checked + label{
+     border: 2px solid #27ae60;
+     color: #27ae60;
+   }
+   div.check input:checked + label:after{
+     background-color: #27ae60;
+   }
+
+div.check input + label:after {
+content: '';
+position: absolute;
+top: 5px;
+left: 5px;
+width: 20px; 
+height: 20px;
+background-color: red;
+border-radius: 5px;
+
+}
+div.check input:checked + label:after {
+transform: translateX(30px);
+}
+
+.radio{
+display: inline;
+}
+input[type="radio"]{
+display:none;
+}
+
+input[type="radio"] + label{
+display: inline-block;
+width: 20px;
+height: 20px;
+border: 2px solid #27ae60;
+border-radius: 50%;
+position: relative; 
+cursor: pointer;
+}
+
+
+input[type="radio"]:checked + label::after{
+content: "";
+display: block;
+width: 12px;
+height: 12px;
+border-radius: 50%;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+background-color: #27ae60;
+}
+
+input[type="radio"]:checked + label::before {
+background-color: #27ae60;
+}
+
+.radio span {
+vertical-align: middle;
+}
+button{
+padding: 10px;
+color: white;
+border: 0px;
+}
+
+.circle{
+width: 40px;
+height: 40px;
+border-radius: 50%;
+vertical-align: top;}
+
+.disabled{
+    border-radius: 5px;
+    width: 72px;
+}
+.active{
+    background-color: #27ae60;
+    border-radius: 5px;
+    width: 72px;
+}
+.active:hover{
+    background-color: #146335;
+}
+.danger{
+    background-color: red;
+    border-radius: 5px;
+    width: 72px;
+}
+.danger:hover{
+    background-color: rgb(153, 30, 30);
+}
+textarea{
+    width: 300px;
+    height: 100px;
+}
+h3{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
